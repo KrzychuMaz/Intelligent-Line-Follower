@@ -1,0 +1,72 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.9919679069601565 -0.048743859491997325 0.11672063966116189 1.0386311381501396
+  position -0.6134339911114625 2.404285715905267 1.3030775416626321
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorAppearance Appearance {
+    texture ImageTexture {
+      url [
+        "C:/Users/Krzychu/Desktop/trr.png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+    }
+    textureTransform TextureTransform {
+      scale 0.3 0.4
+      translation 0 -1
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 406.79949134671637
+  hidden position_0_1 400.46690289972753
+  hidden linearVelocity_0 0.10732932135171509 0.0025526288218717316 -0.0625503973567205
+  hidden angularVelocity_0 -0.0018320728902507404 0.01727171383104348 0.07516017256969292
+  hidden rotation_1 1 0 0 5.71429285718077
+  hidden linearVelocity_1 0.10725328862048168 0.0010860846874221498 -0.0624144730680362
+  hidden angularVelocity_1 -3.1449591205937697 0.04079689997260756 -5.361643185130074
+  hidden rotation_2 1 0 0 0.7536199316975252
+  hidden linearVelocity_2 0.10717605977816265 0.003853283589822237 -0.0630009302132468
+  hidden angularVelocity_2 -3.149500025047589 0.04932917747343983 -5.3589766085680415
+  translation -0.8709090527699013 -0.00040713119783275867 -0.37985466830088993
+  rotation -0.00505965291081539 -0.9999580585552919 -0.0076342021687587636 1.0479112345330115
+  controller "my_controller_lf"
+  camera_fieldOfView 1
+  camera_width 640
+  camera_height 640
+  camera_motionBlur 8
+  groundSensorsSlot [
+    Camera {
+      translation -0.03 0 0
+      rotation 0.2947070427918316 0.2947070427918316 -0.9090079855852681 -1.7177753071795863
+      name "camera1"
+      recognitionColors [
+        0 0 0
+      ]
+      fieldOfView 1
+      width 640
+      height 640
+      recognition Recognition {
+      }
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.02 0
+      name "ir1"
+      type "infra-red"
+    }
+  ]
+}
